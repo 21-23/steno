@@ -1,0 +1,15 @@
+{
+  "name": "steno",
+  "version": "0.0.0",
+  "description": "Incredible logger for your app",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": "git@github.com:games4nerds/steno.git",
+  "author": "games4nerds",
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "@types/node": "^7.0.5"
+  }
+}
