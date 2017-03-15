@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 let prefix = '';
-let perfPrefix = '[perf]';
+const perfPrefix = '[perf]';
 const perfBuffer = [];
 const levels = {
     error: true,
@@ -69,7 +69,6 @@ function readInitialLogLevel() {
 }
 function initSteno(namespace, logLevel) {
     prefix = `[${namespace}]`;
-    perfPrefix = `${prefix}${perfPrefix}`;
     if (logLevel) {
         setLogLevel(logLevel);
     }
@@ -110,7 +109,7 @@ function flush() {
         return;
     }
     while (perfBuffer.length) {
-        console.log(perfPrefix, ...perfBuffer.shift());
+        console.log(prefix, perfPrefix, ...perfBuffer.shift());
     }
     return steno;
 }

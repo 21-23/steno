@@ -18,7 +18,7 @@ interface ISteno {
 }
 
 let prefix: string = '';
-let perfPrefix: string = '[perf]';
+const perfPrefix: string = '[perf]';
 const perfBuffer: any[] = [];
 const levels: ILogLevel = {
     error: true,
@@ -107,7 +107,6 @@ function readInitialLogLevel(): ISteno {
 
 function initSteno(namespace: string, logLevel?: string) {
     prefix = `[${namespace}]`;
-    perfPrefix = `${prefix}${perfPrefix}`;
 
     if (logLevel) {
         setLogLevel(logLevel);
@@ -162,7 +161,7 @@ function flush() {
     }
 
     while (perfBuffer.length) {
-        console.log(perfPrefix, ...perfBuffer.shift());
+        console.log(prefix, perfPrefix, ...perfBuffer.shift());
     }
 
     return steno;
