@@ -182,4 +182,4 @@ const steno: ISteno = {
 // read and set initial values
 readInitialLogLevel();
 
-module.exports = steno;
+export default steno;
