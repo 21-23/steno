@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --diagnostics",
     "dev": "tsc -w",
-    "lint": "tslint --type-check --config tslint.json --project tsconfig.json",
+    "lint": "tslint --type-check -c tslint.json --project tsconfig.json",
     "prepush": "lint-staged"
   },
   "repository": "git@github.com:games4nerds/steno.git",
