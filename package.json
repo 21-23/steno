@@ -1,6 +1,6 @@
 {
   "name": "steno",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Incredible logger for your app",
   "main": "dist/steno.js",
   "scripts": {
