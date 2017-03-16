@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let prefix = '';
 const perfPrefix = '[perf]';
 const perfBuffer = [];
@@ -125,5 +123,5 @@ const steno = {
 };
 // read and set initial values
 readInitialLogLevel();
-exports.default = steno;
+module.exports = steno;
 //# sourceMappingURL=steno.js.map
